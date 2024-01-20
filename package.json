@@ -1,11 +1,32 @@
 {
-  "name": "electronflash-naro",
-  "productName": "electronflash-naro",
+  "name": "redaq-forge",
   "version": "1.0.0",
-  "description": "Test",
+  "description": "Linux launcher for RedAQ",
   "main": "src/index.js",
+  "author": "kairusds",
+  "license": "MIT",
+  "config": {
+    "forge": {
+      "packagerConfig": {
+        "appBundleId": "github.kairusds.redaqforge"
+      },
+      "makers": [
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {
+            "options": {
+              "productName": "RedAQ Forge",
+              "categories": [ "Game" ],
+              "icon": "./src/assets/icon.png",
+              "maintainer": "kairusds"
+            }
+          }
+        }
+      ]
+    }
+  },
   "scripts": {
-    "start": "electron-forge start",
+    "start": "electron-forge start -- --no-sandbox",
     "dev": "electron-forge start --inspect-electron",
     "package": "electron-forge package",
     "make64": "electron-forge make",
@@ -14,47 +35,9 @@
     "lint": "echo \"No linting configured\""
   },
   "keywords": [],
-  "author": {
-    "name": "dae",
-    "email": "notloneth@gmail.com"
-  },
-  "license": "MIT",
-  "config": {
-    "forge": {
-      "packagerConfig": {},
-      "makers": [
-        {
-          "name": "@electron-forge/maker-squirrel",
-          "config": {
-            "name": "electronflash-naro"
-          }
-        },
-        {
-          "name": "@electron-forge/maker-zip",
-          "platforms": [
-            "darwin"
-          ]
-        },
-        {
-          "name": "@electron-forge/maker-deb",
-          "config": {}
-        },
-        {
-          "name": "@electron-forge/maker-rpm",
-          "config": {}
-        }
-      ]
-    }
-  },
-  "dependencies": {
-    "electron-squirrel-startup": "^1.0.0"
-  },
   "devDependencies": {
-    "@electron-forge/cli": "^6.0.0-beta.63",
-    "@electron-forge/maker-deb": "^6.0.0-beta.63",
-    "@electron-forge/maker-rpm": "^6.0.0-beta.63",
-    "@electron-forge/maker-squirrel": "^6.0.0-beta.63",
-    "@electron-forge/maker-zip": "^6.0.0-beta.63",
+    "@electron-forge/cli": "^7.2.0",
+    "@electron-forge/maker-deb": "^7.2.0",
     "electron": "8.2.0"
   }
 }
