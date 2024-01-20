@@ -4,7 +4,7 @@
   "description": "Linux launcher for RedAQ",
   "main": "src/index.js",
   "author": "kairusds",
-  "license": "MIT",
+  "license": "GPL-3.0",
   "config": {
     "forge": {
       "packagerConfig": {
