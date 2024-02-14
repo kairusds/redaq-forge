@@ -1,6 +1,6 @@
 {
   "name": "redaq-forge",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Linux launcher for RedAQ",
   "main": "src/index.js",
   "author": "kairusds",
