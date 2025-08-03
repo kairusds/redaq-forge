@@ -17,7 +17,7 @@ yarn make64 # or make32
 ## Running
 ```sh
 
-# If you compiled it manually, run:
+# If you wanna start the launcher without compiling, run:
 npm run start
 # -- or --
 yarn start
